@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    build:
+      context: ./config/db/
+      dockerfile: Dockerfile
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
