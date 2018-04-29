@@ -2,9 +2,11 @@ version: '3'
 
 services:
   db:
-    build:
-      context: ./config/db/
-      dockerfile: Dockerfile
+    image: postgres:9.6
+    environment:
+      - POSTGRES_USER=project
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=project
     ports:
       - "5432:5432"
 
