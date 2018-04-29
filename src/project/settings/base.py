@@ -46,6 +46,20 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'project.urls'
 
+# Database
+# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRES_DB', 'project'),
+        'USER': os.environ.get('POSTGRES_USER', 'project'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'postgres'),
+        'HOST': os.environ.get('DB_PORT_5432_TCP_ADDR', 'localhost'),
+        'PORT': os.environ.get('DB_PORT_5432_TCP_PORT', '5432')
+    }
+}
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
