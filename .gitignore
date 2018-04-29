@@ -98,3 +98,5 @@ ENV/
 .idea
 /project/settings/local.py
 *.sqlite3
+
+.envfile
