@@ -1,12 +1,19 @@
-import raven
-
 from .base import *
+import os
 
-ALLOWED_HOSTS += [
-    '46.17.40.42',
-]
+DEBUG = True
 
-DEBUG = False
+ALLOWED_HOSTS += ['127.0.0.1', 'localhost', 'example.dj']
+
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": os.environ.get('REDIS_URL', 'localhost:6379'),
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient"
+#         }
+#     }
+# }
 
 RAVEN_LOGIN = os.environ.get('RAVEN_LOGIN')
 RAVEN_PASSWORD = os.environ.get('RAVEN_PASSWORD')

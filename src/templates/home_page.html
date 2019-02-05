@@ -1,8 +1,0 @@
-{% extends 'base.html' %}
-
-{% block container %}
-    <h2>Блоги пользователей</h2>
-    {% for profile in profiles %}
-        <a href="{{ profile.get_absolute_url }}">{{ profile.user.username }}</a><br/>
-    {% endfor %}
-{% endblock %}
