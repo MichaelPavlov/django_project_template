@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    image: postgres:9.6
+    image: postgres:9.6-alpine
     hostname: db
     env_file:
       - config/.envfile
@@ -37,7 +37,7 @@ services:
         max-file: "1"
 
   nginx:
-    image: nginx:latest
+    image: nginx:alpine
     ports:
       - "80:80"
     volumes:
