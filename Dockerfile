@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.7-alpine
 ENV PYTHONUNBUFFERED 1
 ADD config/requirements.txt /app/requirements.txt
 WORKDIR /app/
