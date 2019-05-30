@@ -5,6 +5,8 @@ DEBUG = True
 
 ALLOWED_HOSTS += ['127.0.0.1', 'localhost', 'example.dj']
 
+INTERNAL_IPS = ['127.0.0.1']
+
 # CACHES = {
 #     "default": {
 #         "BACKEND": "django_redis.cache.RedisCache",

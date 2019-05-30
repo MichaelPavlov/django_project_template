@@ -3,7 +3,7 @@ import raven
 from .base import *
 
 ALLOWED_HOSTS += [
-    '46.17.40.42',
+
 ]
 
 DEBUG = False
